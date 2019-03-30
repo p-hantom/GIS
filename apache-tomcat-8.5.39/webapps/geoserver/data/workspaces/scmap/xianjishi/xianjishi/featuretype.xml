@@ -1,0 +1,37 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--1be78bb4:169c7a4f175:-7ffa</id>
+  <name>xianjishi</name>
+  <nativeName>xianjishi</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-45a92aeb:169c767f55f:-7ffe</id>
+  </namespace>
+  <title>xianjishi</title>
+  <keywords>
+    <string>features</string>
+    <string>xianjishi</string>
+  </keywords>
+  <srs>EPSG:4326</srs>
+  <nativeBoundingBox>
+    <minx>97.352221</minx>
+    <maxx>108.542372</maxx>
+    <miny>26.049173</miny>
+    <maxy>34.314673</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>97.352221</minx>
+    <maxx>108.542372</maxx>
+    <miny>26.049173</miny>
+    <maxy>34.314673</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--1be78bb4:169c7a4f175:-7ffb</id>
+  </store>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

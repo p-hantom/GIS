@@ -1,0 +1,35 @@
+<layerGroup>
+  <id>LayerGroupInfoImpl--1be78bb4:169c7a4f175:-7ff8</id>
+  <name>scmap</name>
+  <mode>SINGLE</mode>
+  <workspace>
+    <id>WorkspaceInfoImpl-45a92aeb:169c767f55f:-7fff</id>
+  </workspace>
+  <publishables>
+    <published type="layer">
+      <id>LayerInfoImpl--1be78bb4:169c7a4f175:-7ff9</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--1be78bb4:169c7a4f175:-7ffc</id>
+    </published>
+  </publishables>
+  <styles>
+    <style>
+      <id>StyleInfoImpl-37b18cc6:14d5d036d48:-8000</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl-37b18cc6:14d5d036d48:-8000</id>
+    </style>
+  </styles>
+  <bounds>
+    <minx>97.352221</minx>
+    <maxx>108.542372</maxx>
+    <miny>26.049173</miny>
+    <maxy>34.314673</maxy>
+    <crs>EPSG:4326</crs>
+  </bounds>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layerGroup>

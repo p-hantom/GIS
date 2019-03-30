@@ -1,0 +1,37 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--1be78bb4:169c7a4f175:-7ffd</id>
+  <name>djs</name>
+  <nativeName>djs</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-45a92aeb:169c767f55f:-7ffe</id>
+  </namespace>
+  <title>djs</title>
+  <keywords>
+    <string>features</string>
+    <string>djs</string>
+  </keywords>
+  <srs>EPSG:4326</srs>
+  <nativeBoundingBox>
+    <minx>101.717185</minx>
+    <maxx>107.463295</maxx>
+    <miny>26.585883</miny>
+    <maxy>32.437852</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>101.717185</minx>
+    <maxx>107.463295</maxx>
+    <miny>26.585883</miny>
+    <maxy>32.437852</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--1be78bb4:169c7a4f175:-7ffe</id>
+  </store>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>
