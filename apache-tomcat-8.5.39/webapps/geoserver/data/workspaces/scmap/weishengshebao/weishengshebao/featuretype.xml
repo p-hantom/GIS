@@ -1,27 +1,27 @@
 <featureType>
-  <id>FeatureTypeInfoImpl--1be78bb4:169c7a4f175:-7ffa</id>
-  <name>xianjishi</name>
-  <nativeName>xianjishi</nativeName>
+  <id>FeatureTypeInfoImpl--4651a8fb:169d1535d96:-7ffb</id>
+  <name>weishengshebao</name>
+  <nativeName>weishengshebao</nativeName>
   <namespace>
     <id>NamespaceInfoImpl-45a92aeb:169c767f55f:-7ffe</id>
   </namespace>
-  <title>xianjishi</title>
+  <title>weishengshebao</title>
   <keywords>
     <string>features</string>
-    <string>xianjishi</string>
+    <string>weishengshebao</string>
   </keywords>
   <srs>EPSG:4326</srs>
   <nativeBoundingBox>
-    <minx>97.352221</minx>
-    <maxx>108.542372</maxx>
-    <miny>26.049173</miny>
-    <maxy>34.314673</maxy>
+    <minx>97.786815</minx>
+    <maxx>108.492801</maxx>
+    <miny>26.123001</miny>
+    <maxy>34.240036</maxy>
   </nativeBoundingBox>
   <latLonBoundingBox>
-    <minx>97.352221</minx>
-    <maxx>108.542372</maxx>
-    <miny>26.049173</miny>
-    <maxy>34.314673</maxy>
+    <minx>97.786815</minx>
+    <maxx>108.492801</maxx>
+    <miny>26.123001</miny>
+    <maxy>34.240036</maxy>
     <crs>EPSG:4326</crs>
   </latLonBoundingBox>
   <projectionPolicy>FORCE_DECLARED</projectionPolicy>
@@ -30,7 +30,7 @@
     <entry key="cachingEnabled">false</entry>
   </metadata>
   <store class="dataStore">
-    <id>DataStoreInfoImpl--1be78bb4:169c7a4f175:-7ffb</id>
+    <id>DataStoreInfoImpl--4651a8fb:169d1535d96:-7ffc</id>
   </store>
   <maxFeatures>0</maxFeatures>
   <numDecimals>0</numDecimals>

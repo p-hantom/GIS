@@ -10,15 +10,33 @@
       <id>LayerInfoImpl--1be78bb4:169c7a4f175:-7ff9</id>
     </published>
     <published type="layer">
+      <id>LayerInfoImpl--4651a8fb:169d1535d96:-7ff2</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--4651a8fb:169d1535d96:-7ffd</id>
+    </published>
+    <published type="layer">
       <id>LayerInfoImpl--1be78bb4:169c7a4f175:-7ffc</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--4651a8fb:169d1535d96:-7ffa</id>
     </published>
   </publishables>
   <styles>
     <style>
-      <id>StyleInfoImpl-37b18cc6:14d5d036d48:-8000</id>
+      <id>StyleInfoImpl--4651a8fb:169d1535d96:-7ff1</id>
     </style>
     <style>
-      <id>StyleInfoImpl-37b18cc6:14d5d036d48:-8000</id>
+      <id>StyleInfoImpl--4651a8fb:169d1535d96:-7ff5</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl--4651a8fb:169d1535d96:-7ff7</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl--4651a8fb:169d1535d96:-7fef</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl--4651a8fb:169d1535d96:-7ff9</id>
     </style>
   </styles>
   <bounds>

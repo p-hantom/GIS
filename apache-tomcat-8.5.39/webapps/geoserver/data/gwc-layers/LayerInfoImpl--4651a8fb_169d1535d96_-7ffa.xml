@@ -1,8 +1,8 @@
 <GeoServerTileLayer>
-  <id>LayerInfoImpl--1be78bb4:169c7a4f175:-7ff9</id>
+  <id>LayerInfoImpl--4651a8fb:169d1535d96:-7ffa</id>
   <enabled>true</enabled>
   <inMemoryCached>true</inMemoryCached>
-  <name>scmap:xianjishi</name>
+  <name>scmap:weishengshebao</name>
   <mimeFormats>
     <string>image/png</string>
     <string>image/jpeg</string>
@@ -26,7 +26,7 @@
       <key>STYLES</key>
       <defaultValue></defaultValue>
       <availableStyles class="sorted-set"/>
-      <defaultStyle>scmap:xianjishi</defaultStyle>
+      <defaultStyle>scmap:weishengshebao</defaultStyle>
     </styleParameterFilter>
   </parameterFilters>
   <gutter>0</gutter>

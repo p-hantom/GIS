@@ -1,12 +1,12 @@
 <layer>
-  <name>xianjishi</name>
-  <id>LayerInfoImpl--1be78bb4:169c7a4f175:-7ff9</id>
+  <name>railway</name>
+  <id>LayerInfoImpl--4651a8fb:169d1535d96:-7ff2</id>
   <type>VECTOR</type>
   <defaultStyle>
-    <id>StyleInfoImpl--4651a8fb:169d1535d96:-7ff1</id>
+    <id>StyleInfoImpl-37b18cc6:14d5d036d48:-8000</id>
   </defaultStyle>
   <resource class="featureType">
-    <id>FeatureTypeInfoImpl--1be78bb4:169c7a4f175:-7ffa</id>
+    <id>FeatureTypeInfoImpl--4651a8fb:169d1535d96:-7ff3</id>
   </resource>
   <attribution>
     <logoWidth>0</logoWidth>

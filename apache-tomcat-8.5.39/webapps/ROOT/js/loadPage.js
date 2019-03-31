@@ -350,3 +350,36 @@ var pureCoverage = false;
         }
 
         document.getElementById("popup").style.display="none";
+
+        //get djs points to calculate distance from
+        var djsPointRequest = new ol.format.WFS().writeGetFeature({
+          srsName: 'EPSG:4326',
+          featureNS: 'http://localhost:8080',    //命名空间
+          featurePrefix: 'scmap',               //工作区域
+          featureTypes: ['djs'],       //图层名
+          outputFormat: 'application/json',
+          filter:
+            ol.format.filter.like('Name', '*')
+        });
+
+        var djsPointList = [];
+
+        fetch('http://localhost:8080/geoserver/wfs', {
+          method: 'POST',
+          body: new XMLSerializer().serializeToString(djsPointRequest)
+        })
+          .then(function (response) {
+            return response.json()
+          })
+          .then(function (json){
+            for (let item of json.features){
+              let px = item.properties.POINT_X;
+              let py = item.properties.POINT_Y;
+              djsPointList.push({
+                point: [px, py],
+                name: item.properties.Name,
+              })
+            }
+          });
+
+        //console.log(djsPointList)

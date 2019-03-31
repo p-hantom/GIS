@@ -1,12 +1,12 @@
 <layer>
-  <name>xianjishi</name>
-  <id>LayerInfoImpl--1be78bb4:169c7a4f175:-7ff9</id>
+  <name>guodao</name>
+  <id>LayerInfoImpl--4651a8fb:169d1535d96:-7ffd</id>
   <type>VECTOR</type>
   <defaultStyle>
-    <id>StyleInfoImpl--4651a8fb:169d1535d96:-7ff1</id>
+    <id>StyleInfoImpl--4651a8fb:169d1535d96:-7ff7</id>
   </defaultStyle>
   <resource class="featureType">
-    <id>FeatureTypeInfoImpl--1be78bb4:169c7a4f175:-7ffa</id>
+    <id>FeatureTypeInfoImpl--4651a8fb:169d1535d96:-7ffe</id>
   </resource>
   <attribution>
     <logoWidth>0</logoWidth>

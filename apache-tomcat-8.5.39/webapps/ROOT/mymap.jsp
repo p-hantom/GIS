@@ -275,17 +275,17 @@
       </div>
       <!-- *********** -->
     <div>
-      <p>enter:</p>
-      <input type="text" size="80" id="filterByName" value="成"/> 
+      <p>输入城市名：</p>
+      <input type="text" size="80" id="filterByName" value=""/> 
       <a id="updateFilterByNameButton" href="#" onClick="updateFilterByName()" title="Apply filter">Search</a>
       <a id="resetFilterByNameButton" href="#" onClick="resetFilterByName()" title="Reset filter">Reset</a>
     </div>
 
     <div>
       <p>enter a longitude:</p>
-      <input type="text" size="80" id="longitude" value="102"/> 
+      <input type="text" size="80" id="longitude" value=""/> 
       <p>enter a latitude:</p>
-      <input type="text" size="80" id="latitude" value="31"/> 
+      <input type="text" size="80" id="latitude" value=""/> 
       <a id="updateCoordButton" href="#" onClick="updateCoord()" title="Apply filter">Search</a>
       <a id="resetCoordButton" href="#" onClick="resetCoord()" title="Reset filter">Reset</a>
     </div>

@@ -41,7 +41,7 @@ function updateFilterByName() {
 
         var vectorSource1 = new ol.source.Vector({});
 
-        for (var item of json.features) {
+        for (let item of json.features) {
           var px = item.properties.POINT_X;
           var py = item.properties.POINT_Y;
           var point = new ol.geom.Point([px, py], "XY")
@@ -55,7 +55,8 @@ function updateFilterByName() {
           vectorSource1.addFeature(xFeature);
         }
 
-        document.getElementById("popup").style.display="block";
+        if(document.getElementById("popup"))
+            document.getElementById("popup").style.display="block";
 
         //popup
         var container = document.getElementById("popup");
@@ -74,16 +75,15 @@ function updateFilterByName() {
         map.addLayer(vectorLayer1)
         //map.addOverlay(overlay)
 
-         popupCloser.onclick = function () {
-            overlay.setPosition(undefined);
-            popupCloser.blur();
-            return false;
-          };
+        if(popupCloser)
+            popupCloser.onclick = function () {
+                overlay.setPosition(undefined);
+                popupCloser.blur();
+                return false;
+            };
         
-        console.log("before click")
         map.on('click', function (e) {
           map.addOverlay(overlay);
-          console.log("after click")
           //在点击时获取像素区域
           var pixel = map.getEventPixel(e.originalEvent);
           map.forEachFeatureAtPixel(pixel, function (feature) {
