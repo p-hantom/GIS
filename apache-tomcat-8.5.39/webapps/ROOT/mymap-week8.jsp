@@ -177,6 +177,60 @@
       content: "close";
     }
 
+
+    /* popup week8 */
+    .ol-popup1 {
+      position: absolute;
+      background-color: white;
+      -webkit-filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+      filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #cccccc;
+      bottom: 12px;
+      left: -50px;
+      min-width: 280px;
+    }
+
+    .ol-popup1:after,
+    .ol-popup1:before {
+      top: 100%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    .ol-popup1:after {
+      border-top-color: white;
+      border-width: 10px;
+      left: 48px;
+      margin-left: -10px;
+    }
+
+    .ol-popup1:before {
+      border-top-color: #1a0505;
+      border-width: 11px;
+      left: 48px;
+      margin-left: -11px;
+      
+    }
+
+    .ol-popup-closer1 {
+      text-decoration: none;
+      position: absolute;
+      top: 2px;
+      right: 8px;
+    }
+
+    .ol-popup-closer1:after {
+      content: "close";
+    }
+
+    /*  */
+
     /* eagle eye */
     .ol-custom-overviewmap,
         .ol-custom-overviewmap.ol-uncollapsible {
@@ -184,8 +238,8 @@
             left: auto;
             right: 0;
             /*右侧显示*/
-            bottom: 0;
-            /*底部显示*/
+            top: 0;
+            /*顶部显示*/
         }
         /* 鹰眼控件展开时控件外框的样式 */
 
@@ -211,31 +265,6 @@
             right: 1px;
             top: 1px;
         }
-/* zoom */
-        .ol-zoom .ol-zoom-out {
-        margin-top: 204px;
-      }
-       .ol-zoomslider {
-        background-color: transparent;
-        top: 2.3em;
-      }
-
-       .ol-touch .ol-zoom .ol-zoom-out {
-        margin-top: 212px;
-      }
-       .ol-touch .ol-zoomslider {
-        top: 2.75em;
-      }
-
-       .ol-zoom-in.ol-has-tooltip:hover [role=tooltip],
-       .ol-zoom-in.ol-has-tooltip:focus [role=tooltip] {
-        top: 3px;
-      }
-
-       .ol-zoom-out.ol-has-tooltip:hover [role=tooltip],
-       .ol-zoom-out.ol-has-tooltip:focus [role=tooltip] {
-        top: 232px;
-      }
 
         #scalebar
         {
@@ -247,7 +276,7 @@
     </style>
 
 
-    <!-- </style> -->
+    </style>
     <!-- <script src="http://localhost:8080/geoserver/openlayers3/ol.js" type="text/javascript"></script> -->
     <script src="http://localhost:8080/ol.js" type="text/javascript"></script>
 
@@ -366,28 +395,64 @@
 
     <div id="map">
       <div class="ol-toggle-options ol-unselectable"><a title="Toggle options toolbar" onClick="toggleControlPanel()" href="#toggle">...</a></div>
+      <div id="command_panel">
+        <div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="button" value="画点" onclick="drawFeature('Point');">
+          <input type="button" value="画线" onclick="drawFeature('LineString');">
+          <input type="button" value="画矩形" onclick="drawFeature('Polygon');">
+          <input type="button" value="选择物体" onclick="pointSelect1();">
+        </div>
+      </div>
     </div>
 
-    <!-- <div id="popup" class="ol-popup">
-      <a href="#" id="popup-closer" class="ol-popup-closer"></a>
-      <div id="popup-content"></div>
-    </div> -->
+    <div id="popup1" class="ol-popup1">
+        <a href="#" id="popup-closer1" class="ol-popup-closer1"></a>
+        <div id="popup-content1" class="ol-popup-content1"></div>
+        <hr>
+        <div id="popup-content-bottom1">
+          <input type="button" value="save" onclick="saveFeature();">
+        </div>
+     
+    </div>
 
-    <div id="wrapper">
+    <div id="wrapper" >
         <div id="location"></div>
         <div id="scale">
+            <!-- <div id="popup1">
+                <a href="#" id="popup-closer1"></a>
+                <div id="popup-content1" ></div>
+                <hr>
+                <div id="popup-content-bottom1">
+                  <input type="button" value="save" onclick="saveFeature();">
+                </div>
+              </div> -->
+        <!-- <div id="popup1" class="ol-popup1">
+          <a href="#" id="popup-closer1" class="ol-popup-closer1"></a>
+          <div id="popup-content1" class="ol-popup-content1"></div>
+          <hr>
+          <div id="popup-content-bottom1">
+            <input type="button" value="save" onclick="saveFeature();">
+          </div>
+       
+      </div> -->
     </div>
+
+
     <div id="nodelist">
         <em>Click on the map to get feature info</em>
     </div>
-    
-    <script type="text/javascript" src="js/loadPage.js"></script>
+
+    <script type="text/javascript" src="js/loadPage-week8.js"></script>
+    <script type="text/javascript" src="js/map_popup.js"></script>
+    <script type="text/javascript" src="js/drawMapFeature-week8.js"></script>
 
 
-    <script type="text/javascript" src="js/searchCoord.js" ></script>
+    <script type="text/javascript" src="js/searchCoord-week8.js" ></script>
 
-    <script type="text/javascript" src="js/searchName.js"></script>
-    <script type="text/javascript" src="js/eagleEye.js"></script>
+    <script type="text/javascript" src="js/searchName-week8.js"></script>
+    <script type="text/javascript" src="js/eagleEye-week8.js"></script>
+    <script type="text/javascript" src="js/guiji-week8.js"></script>
 
   </body>
 </html>

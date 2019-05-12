@@ -56,6 +56,40 @@ var pureCoverage = false;
           axisOrientation: 'neu',
           global: true
       });
+
+var myLayer = undefined;
+var draw =undefined;
+var featureWKT=undefined;
+var featureType=undefined;
+var featureLon=undefined;
+var featureLat=undefined;
+var resultSet=undefined;
+//drawFeature
+var source=new ol.source.Vector({})
+myLayer = new ol.layer.Vector({
+  source: source,//new ol.source.Vector({}),
+  style: function(feature){
+    return [
+      new ol.style.Style({
+        fill: new ol.style.Fill({
+          color: 'rgba(0,0,255,0.2)'
+        }),
+        stroke: new ol.style.Stroke({
+          color: '#000',
+          width: 3
+        }),
+        image: new ol.style.Circle({
+          radius: 12,
+          fill: new ol.style.Fill({
+            color: '#ffcc33'
+          })
+        })
+      })
+    ]
+  }
+})
+
+
       var map = new ol.Map({
         controls: ol.control.defaults({
           attribution: false
@@ -64,7 +98,7 @@ var pureCoverage = false;
         layers: [
           untiled,
           tiled,
-          //vector
+          myLayer
         ],
         //overlays: [],  //popup overlay
         view: new ol.View({
@@ -102,126 +136,7 @@ var pureCoverage = false;
         }
       });
 
-
-// ********************************************
-
-  //     var vectorSource = new ol.source.Vector();
-  //               var vector = new ol.layer.Vector({
-  //                   source: vectorSource,
-  //                   style: new ol.style.Style({
-  //                       stroke: new ol.style.Stroke({
-  //                           color: 'rgba(0, 0, 255, 1.0)',
-  //                           width: 2
-  //                       })
-  //                   })
-  //               });
-  //               map.addLayer(vector);
-
-  //               // generate a GetFeature request
-  //               var featureRequest = new ol.format.WFS().writeGetFeature({
-  //                   srsName: 'EPSG:4326',
-  //                   featureNS: 'http://localhost:8080',    //命名空间
-  //                   featurePrefix: 'scmap',               //工作区域
-  //                   featureTypes: ['djs'],       //图层名
-  //                   outputFormat: 'application/json',
-  //                   filter:
-  //                       ol.format.filter.equalTo('Name', '雅安市')
-  //                       //ol.format.filter.equalTo('FeatureID', '11')    //todo 条件查询过滤
-  // //                   filter: ol.format.filter.and(
-  // //                        //ol.format.filter.intersects('the_geom', polygon, 'EPSG:4326'),
-  // //                        ol.format.filter.equalTo('Name', '成都市')
-  // // )
-  //               });
-
-               
-
-  //               // then post the request and add the received features to a layer
-
-  //               fetch('http://localhost:8080/geoserver/wfs', {
-  //                   method: 'POST',
-  //                   body: new XMLSerializer().serializeToString(featureRequest)
-  //               })
-  //               .then(function(response) {
-  //                   return response.json()
-  //               })
-  //               .then(function(json) {
-  //                   var features = new ol.format.GeoJSON().readFeatures(json);
-  //                   vectorSource.addFeatures(features);
-  //                   map.getView().fit(vectorSource.getExtent());
-  //               });
-
-// ********************************************
-
-//       var vectorSource = new ol.source.Vector();
-//                 var vector = new ol.layer.Vector({
-//                     source: vectorSource,
-//                     style: new ol.style.Style({
-//                         stroke: new ol.style.Stroke({
-//                             color: 'rgba(0, 0, 255, 1.0)',
-//                             width: 2
-//                         })
-//                     })
-//                 });
-//                 map.addLayer(vector);
-
-// var featureRequest = new ol.format.WFS().writeGetFeature({
-//         srsName: 'EPSG:3857',
-//         featureNS: 'http://localhost:8080/geoserver',
-//         featurePrefix: 'scmap',
-//         featureTypes: ['djs'],
-//         outputFormat: 'application/json',
-//         filter: andFilter(
-//           likeFilter('Name', '成都市'),
-//           equalToFilter('Name', '成都市')
-//         )
-//       });
-
-//       // then post the request and add the received features to a layer
-//       fetch('http://localhost:8080/mymap.jsp', {
-//         method: 'POST',
-//         body: new XMLSerializer().serializeToString(featureRequest)
-//       }).then(function(response) {
-//         return response.json();
-//       }).then(function(json) {
-//         var features = new GeoJSON().readFeatures(json);
-//         vectorSource.addFeatures(features);
-//         map.getView().fit(vectorSource.getExtent());
-//       });
-
-
-//***********************************
-
-// function getWfsData(filter) {
-//         //获取wms生成的资源url， fdLayer.getSource().getGetFeatureInfoUrl
-//         var featureRequest = new ol.format.WFS().writeGetFeature({
-//             srsName: 'EPSG:4326',//坐标系统
-//             featureNS: 'scmap',//命名空间 URI
-//             featurePrefix: 'scmap',//工作区名称
-//             featureTypes: ['scmap:djs'],//查询图层，可以同一个工作区下多个图层，逗号隔开
-//             outputFormat: 'application/json',
-//             filter: filter
-//         });
-//         fetch(geourl + 'localhost:8080/mymap.jsp', {//geoserver wfs地址如localhost:8080/geoserver/wfs
-//             method: 'POST',
-//             body: new XMLSerializer().serializeToString(featureRequest)
-//         }).then(function (response) {
-//             return response.json();
-//         }).then(function (json) {
-//             //查询结果
-//             console.log(json);
-//             if (json.features && json.features.length > 0) {
-//                 var gj = new ol.format.GeoJSON();
-//                 var features=gj.readFeatures(json);
-//             }
-//         })
-//    }
-
-//    getWfsData()
-
-   //************************
-
-
-
+      
 
       // sets the chosen WMS version
       function setWMSVersion(wmsVersion) {
