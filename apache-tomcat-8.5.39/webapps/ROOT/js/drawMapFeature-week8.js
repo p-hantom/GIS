@@ -1,6 +1,6 @@
 function getFeature(){
     var url="get_data.jsp";
-    $post(url, function(json){
+    $.post(url, function(json){
         console.log("返回的数据是："+JSON.stringify(json));
         displayFeatures(json);
         resultSet=json;
@@ -43,9 +43,6 @@ function addInteraction(value){
 var pointSelect=undefined;
 
 function drawStart(){
-    // if(pointSelect){
-    //     map.removeInteraction(pointSelect);
-    // }
     
     console.log("start drawing");
 }
@@ -67,9 +64,6 @@ function addSelection(select){
     map.addInteraction(select);
     console.log("map.addInteraction(select) " );
     select.on("select", function(e){
-        // if(selected==0){
-        //     return;
-        // }
         let features = e.selected;
         let feature = features[0];
         console.log("feature: " + feature);
@@ -78,14 +72,8 @@ function addSelection(select){
             console.log("getWKT=" + getWKT(feature));
             let coordinate = e.mapBrowserEvent.coordinate;
             let hdms = ol.coordinate.toStringHDMS(ol.proj.transform(coordinate,'EPSG:3857','EPSG:4326'));
-            let html = "<div>请输入名字：<input type='text' id='drawMapFeature_name'><p>坐标是：<p>获得的WKT: </p></p></div>"
+            let html = "<div>请输入名字：<input type='text' id='drawMapFeature_name'><p>坐标是：["+coordinate[0]+","+coordinate[1]+"]<p>获得的WKT: "+getWKT(feature)+"</p></p></div>"
             console.log("coordinate = "+coordinate);
-            //popup
-            // let tmp=MapPopup()
-            // tmp.init()
-            //tmp.popup(map,coordinate,html);
-            //MapPopup()//.init()
-            //MapPopup().popup()
             init1(map,coordinate,html);
 
             featureWKT=getWKT(feature);
@@ -106,8 +94,9 @@ function getWKT(feature){
 
 function saveFeature(){
     let featureName=$("#drawMapFeature_name").val();
-    let url="save_data.jsp?type="+featureType+"&drawMapFeature_name="+featureName+
-            "&wkt="+featureWKT+"&lon="+featureLon+"&lat="+featureLat;
+    // let url="save_data2.jsp"
+     let url="save_data.jsp?type="+featureType+"&drawMapFeature_name="+featureName+
+             "&wkt="+featureWKT+"&lon="+featureLon+"&lat="+featureLat;
     console.log(url);
     $.post(url, function(json){
         console.log("返回的数据: "+JSON.stringify(json));
