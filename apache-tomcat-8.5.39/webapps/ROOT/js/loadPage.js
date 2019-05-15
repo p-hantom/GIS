@@ -56,6 +56,42 @@ var pureCoverage = false;
           axisOrientation: 'neu',
           global: true
       });
+
+//draw features
+var myLayer = undefined;
+var draw =undefined;
+var featureWKT=undefined;
+var featureType=undefined;
+var featureLon=undefined;
+var featureLat=undefined;
+var resultSet=undefined;
+//drawFeature
+var source=new ol.source.Vector({})
+myLayer = new ol.layer.Vector({
+  source: source,//new ol.source.Vector({}),
+  style: function(feature){
+    return [
+      new ol.style.Style({
+        fill: new ol.style.Fill({
+          color: 'rgba(0,0,255,0.2)'
+        }),
+        stroke: new ol.style.Stroke({
+          color: '#000',
+          width: 3
+        }),
+        image: new ol.style.Circle({
+          radius: 12,
+          fill: new ol.style.Fill({
+            color: '#ffcc33'
+          })
+        })
+      })
+    ]
+  }
+})
+
+
+
       var map = new ol.Map({
         controls: ol.control.defaults({
           attribution: false
@@ -64,7 +100,7 @@ var pureCoverage = false;
         layers: [
           untiled,
           tiled,
-          //vector
+          myLayer
         ],
         //overlays: [],  //popup overlay
         view: new ol.View({
@@ -101,6 +137,8 @@ var pureCoverage = false;
           document.getElementById('nodelist').innerHTML = '<iframe seamless src="' + url + '"></iframe>';
         }
       });
+
+      
 
 
 // ********************************************

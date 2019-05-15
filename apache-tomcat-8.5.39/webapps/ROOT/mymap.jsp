@@ -244,6 +244,43 @@
             z-index:2000;
         }
 
+        .tooltip {
+            position: relative;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 4px;
+            color: white;
+            padding: 4px 8px;
+            opacity: 0.7;
+            white-space: nowrap;
+        }
+
+        .tooltip-measure {
+            opacity: 1;
+            font-weight: bold;
+        }
+
+        .tooltip-static {
+            background-color: #ffcc33;
+            color: black;
+            border: 1px solid white;
+        }
+
+        .tooltip-measure::before,
+        .tooltip-static::before {
+            border-top: 6px solid rgb(0, 0, 0, 0.5);
+            border-right: 6px solid transparent;
+            border-left: 6px solid transparent;
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            margin-left: -7px;
+            left: 50%;
+        }
+
+        .tooltip-static::before {
+            border-top-color: #ffcc33;
+        }
+
     </style>
 
 
@@ -344,34 +381,57 @@
         <a href="#" id="popup-closer" class="ol-popup-closer"></a>
         <div id="popup-content"></div>
       </div>
-      <!-- *********** -->
+
+        <h2>四川省地图</h2>
+    <hr>
     <div>
-      <p>输入城市名：</p>
-      <input type="text" size="80" id="filterByName" value=""/> 
-      <a id="updateFilterByNameButton" href="#" onClick="updateFilterByName()" title="Apply filter">Search</a>
-      <a id="resetFilterByNameButton" href="#" onClick="resetFilterByName()" title="Reset filter">Reset</a>
+        <p>输入城市名查询：
+          <input type="text" size="20" id="filterByName" value=""/>
+          <a id="updateFilterByNameButton" href="#" onClick="updateFilterByName()" title="Apply filter">Search</a>
+          <a id="resetFilterByNameButton" href="#" onClick="resetFilterByName()" title="Reset filter">Reset</a>
+        </p>
     </div>
 
+    <hr>
+
     <div>
-      <p>enter a longitude:</p>
-      <input type="text" size="80" id="longitude" value=""/> 
-      <p>enter a latitude:</p>
-      <input type="text" size="80" id="latitude" value=""/> 
-      <a id="updateCoordButton" href="#" onClick="updateCoord()" title="Apply filter">Search</a>
-      <a id="resetCoordButton" href="#" onClick="resetCoord()" title="Reset filter">Reset</a>
+      <p>输入经纬度查询：</p>
+      <p>Longitude:
+        <input type="text" size="10" id="longitude" value=""/> 
+      &nbsp&nbsp&nbspLatitude:
+        <input type="text" size="10" id="latitude" value=""/> 
+        <a id="updateCoordButton" href="#" onClick="updateCoord()" title="Apply filter">Search</a>
+        <a id="resetCoordButton" href="#" onClick="resetCoord()" title="Reset filter">Reset</a>
+      </p>
     </div>
+    <hr>
 
     <!-- *********** -->
-    
+    <div id="command_panel">
+      <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="button" value="画线" onclick="drawFeature('LineString');">
+        <input type="button" value="画矩形" onclick="drawFeature('Polygon');">
+      </div>
+    </div>
+    <br>
 
     <div id="map">
       <div class="ol-toggle-options ol-unselectable"><a title="Toggle options toolbar" onClick="toggleControlPanel()" href="#toggle">...</a></div>
     </div>
 
-    <!-- <div id="popup" class="ol-popup">
-      <a href="#" id="popup-closer" class="ol-popup-closer"></a>
-      <div id="popup-content"></div>
-    </div> -->
+    <div id="measure"></div>
+
+    <div id="popup1" class="ol-popup1">
+        <a href="#" id="popup-closer1" class="ol-popup-closer1"></a>
+        <div id="popup-content1" class="ol-popup-content1"></div>
+        <hr>
+        <div id="popup-content-bottom1">
+          <input type="button" value="save" onclick="saveFeature();">
+        </div>
+    </div>
+
+    
 
     <div id="wrapper">
         <div id="location"></div>
@@ -380,10 +440,15 @@
     <div id="nodelist">
         <em>Click on the map to get feature info</em>
     </div>
-    
+
+
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/loadPage.js"></script>
-
-
+    <script type="text/javascript" src="js/map_popup-week7.js"></script>
+    <script type="text/javascript" src="js/drawMapFeature-week7.js"></script>
+    <script type="text/javascript" >
+      getFeature();
+    </script>
     <script type="text/javascript" src="js/searchCoord.js" ></script>
 
     <script type="text/javascript" src="js/searchName.js"></script>
